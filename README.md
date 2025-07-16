@@ -1,30 +1,30 @@
 # zepto_inventory_analysis
 
-### 📂 About the Dataset
+###  About the Dataset
 
 This dataset provides a detailed view of the product catalog and pricing structure of **Zepto**, a fast-growing 10-minute grocery delivery platform. The data captures essential attributes for over **3,000+ SKUs (Stock Keeping Units)** across various categories like **Fruits & Vegetables, Dairy, Packaged Foods, Beverages**, and more.
 
 
-### 📌 Project Overview
+###  Project Overview
 
 The goal is to simulate how actual data analysts in the e-commerce or retail industries work behind the scenes to use SQL to:
 
-✅ Set up a messy, real-world e-commerce inventory database
+ **1** Set up a messy, real-world e-commerce inventory database
 
-✅ Perform **Data Exploration** to analyze product categories, stock availability, and pricing inconsistencies
+**2** Perform **Data Exploration** to analyze product categories, stock availability, and pricing inconsistencies
 
-✅ Implement **Data Cleaning** to handle null values, remove invalid entries, and convert pricing from paise to rupees
+**3**  Implement **Data Cleaning** to handle null values, remove invalid entries, and convert pricing from paise to rupees
 
-✅ Write **business-driven SQL queries** to derive insights around pricing, inventory, stock availability, revenue, and more
+**4**  Write **business-driven SQL queries** to derive insights around pricing, inventory, stock availability, revenue, and more
 
 
-### 📂 Dataset Overview
+###  Dataset Overview
 
 The dataset was sourced from Kaggle and was originally scraped from Zepto’s official product listings. It mimics what you’d typically encounter in a real-world e-commerce inventory system.
 
 Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate product names exist because the same product may appear multiple times in different package sizes, weights, discounts, or categories to improve visibility — exactly how real catalog data looks.
 
-#### 🧾 Columns:
+####  Columns:
 
 - **`sku_id`**: Unique identifier for each product entry (Synthetic Primary Key)  
 - **`name`**: Product name as it appears on the app  
@@ -38,9 +38,9 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 - **quantity`**: Number of units per package (mixed with grams for loose produce)
 
 
-## 🔄 Project Workflow: Azure SQL + SSMS + SQL
+##  Project Workflow: Azure SQL + SSMS + SQL
 
-### 1️⃣ Set Up Cloud Infrastructure
+### 1️ Set Up Cloud Infrastructure
 - Created a **cloud-based SQL Server** and **Azure SQL Database** using Azure Portal
 
   ![Screenshot 2025-06-29 155530](https://github.com/user-attachments/assets/3a09a36b-f8ce-4803-aaed-ae6433a77fb9)
@@ -50,7 +50,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 - ![Screenshot 2025-06-29 155853](https://github.com/user-attachments/assets/9ddc45a5-0445-4644-97eb-1de4b615d8ba)
 
 
-### 2️⃣ Connected Azure SQL to SSMS
+### 2️ Connected Azure SQL to SSMS
 - Connected to Azure SQL using **SQL Server Management Studio (SSMS)**
 - Authentication: SQL Login
 - Server: `server name`
@@ -58,12 +58,12 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 - ![Screenshot 2025-06-26 124504](https://github.com/user-attachments/assets/5a0742e6-30ed-465f-9a09-94e288dadfe3)
 
 
-### 3️⃣ Imported CSV into Azure SQL
+### 3️ Imported CSV into Azure SQL
 - Used **Flat File Import Wizard** in SSMS to upload `zepto_inventory.csv`
 - Created table `zepto_data` inside Azure SQL Database
 
 
-###  4️⃣ 🔍 Data Exploration
+###  4️ 🔍 Data Exploration
 
 - Counted the total number of records in the dataset
 - Viewed a sample of the dataset to understand structure and content
@@ -73,14 +73,14 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 - Detected products present multiple times, representing different SKUs
 ---
 
-### 5️⃣ 🧹 Data Cleaning
+### 5️ 🧹 Data Cleaning
 
 - Identified and removed rows where MRP or discounted selling price was zero
 - Converted `mrp` and `discountedSellingPrice` from **paise to rupees** for consistency and readability
 
 ---
 
-### 6️⃣  📊 Business Insights
+### 6️  📊 Business Insights
 
 - Found top 10 best-value products based on discount percentage
 - Identified high-MRP products that are currently out of stock
@@ -95,7 +95,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 
 
-## 🧰 Tools & Technologies Used
+##  Tools & Technologies Used
 
 | Tool / Platform           | Purpose                                     |
 |---------------------------|---------------------------------------------|
@@ -107,7 +107,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 ---
 
-## ✅ Outcome
+##  Outcome
 
 This project demonstrates how a data analyst can work with cloud-hosted inventory data to clean, explore, and extract actionable insights using **SQL and Azure**. The workflow mimics real-world business intelligence operations in e-commerce.
 
