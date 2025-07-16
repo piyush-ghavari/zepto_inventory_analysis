@@ -18,13 +18,13 @@ The goal is to simulate how actual data analysts in the e-commerce or retail ind
 **4**  Write **business-driven SQL queries** to derive insights around pricing, inventory, stock availability, revenue, and more
 
 
-###  Dataset Overview
+### Dataset Overview
 
 The dataset was sourced from Kaggle and was originally scraped from Zepto’s official product listings. It mimics what you’d typically encounter in a real-world e-commerce inventory system.
 
 Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate product names exist because the same product may appear multiple times in different package sizes, weights, discounts, or categories to improve visibility — exactly how real catalog data looks.
 
-####  Columns:
+#### Columns:
 
 - **`sku_id`**: Unique identifier for each product entry (Synthetic Primary Key)  
 - **`name`**: Product name as it appears on the app  
@@ -38,7 +38,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 - **quantity`**: Number of units per package (mixed with grams for loose produce)
 
 
-##  Project Workflow: Azure SQL + SSMS + SQL
+## Project Workflow: Azure SQL + SSMS + SQL
 
 ### 1️ Set Up Cloud Infrastructure
 - Created a **cloud-based SQL Server** and **Azure SQL Database** using Azure Portal
@@ -63,7 +63,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 - Created table `zepto_data` inside Azure SQL Database
 
 
-###  4️ 🔍 Data Exploration
+### 4️ Data Exploration
 
 - Counted the total number of records in the dataset
 - Viewed a sample of the dataset to understand structure and content
@@ -73,14 +73,14 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 - Detected products present multiple times, representing different SKUs
 ---
 
-### 5️ 🧹 Data Cleaning
+### 5️ Data Cleaning
 
 - Identified and removed rows where MRP or discounted selling price was zero
 - Converted `mrp` and `discountedSellingPrice` from **paise to rupees** for consistency and readability
 
 ---
 
-### 6️  📊 Business Insights
+### 6️ Business Insights
 
 - Found top 10 best-value products based on discount percentage
 - Identified high-MRP products that are currently out of stock
@@ -95,7 +95,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 
 
-##  Tools & Technologies Used
+## Tools & Technologies Used
 
 | Tool / Platform           | Purpose                                     |
 |---------------------------|---------------------------------------------|
